@@ -1,0 +1,42 @@
+@mixin flexDirection($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+.navbar-nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 0 40px;
+  color: #fff;
+
+  .tesla-logo {
+    width: 120px;
+    height: 24px;
+  }
+
+  .navbar-list {
+    @include flexDirection(row);
+    list-style: none;
+    li {
+      margin: 0 16px;
+      font-weight: 500;
+    }
+  }
+  .navbar-options {
+    @include flexDirection(row);
+    .icon-navbar {
+      margin: 0 5px;
+      width: 25px;
+    }
+  }
+}
